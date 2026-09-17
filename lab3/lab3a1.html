@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- use sweetslert website in project -->
+
+    <script>
+        alert("Calculator");
+        let a=parseFloat(prompt("enter n1:"));
+        let b=parseFloat(prompt("enter n2:"));
+
+        let c=prompt("enter the operation(+,-,*,/)");
+
+        if(a>b){
+            if(c=='+'){
+                alert("add of n1 & n2="+(a+b));
+            }
+            else if(c=='-'){
+                alert("subtraction of n1 & n2="+(a-b));
+            }
+            else if(c=='*'){
+                alert("multiplication of n1 & n2="+(a*b));
+            }
+            else if(c=='/'){
+                alert("div of n1 & n2="+(a/b));
+            }
+        }
+        else{
+            alert("Invalid input!");
+        }
+    </script>
+</body>
+</html>
