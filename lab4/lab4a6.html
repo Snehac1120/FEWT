@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ans="";
+        n=parseInt(prompt("enter a no:"));
+        if(n<0){
+            document.write("negative no");
+        }
+        if(isNaN(n)){
+            document.write("not a no");
+        }
+        if(n>999){
+            document.write("out of range");
+        }
+        else{
+            ones=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+            tens=["","","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"];
+            hunderds=["","one hundred","two hundred","three hundred","four hundred","five hundred","six hundred","seven hundred","eight hundred","nine hundred"];
+        
+            if(n>99){
+                ans+=hunderds[parseInt(n/100)];
+                n=n%100;
+            }
+            if(n>19){
+            ans+=tens[parseInt(n/10)];
+            n=n%10;
+            }
+            if(n>0){
+                ans+=""+ones[n];
+            }
+            document.write(ans);
+        }
+    </script>
+</body>
+</html>

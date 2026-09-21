@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        x=parseInt(prompt("enter no for x:"));
+        y=parseInt(prompt("enter no for y:"));
+        small=(x<y)? x:y;
+        for(i=small;i>=1;i--){
+            if(x%i==0 && y%i==0){
+                document.write("GCD="+i);
+            }
+        }
+    </script>
+</body>
+</html>
