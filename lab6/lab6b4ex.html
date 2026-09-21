@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        product=[{
+            pro_name:"Face wash",
+            price:500,
+            pro_img:"https://cdn.shopify.com/s/files/1/0609/6096/4855/files/FXN-OAFW100_71.jpg?v=1777364507&width=640&quality=60",
+            pro_brand:"dot & key",
+        },{
+            pro_name:"sun screen",
+            pro_img:"https://cdn.shopify.com/s/files/1/0609/6096/4855/files/FXN-PMTS50-S4-01.jpg?v=1777371983&width=640&quality=60",
+            price:300,
+            pro_brand:"dot & key",
+        },{
+            pro_name:"gel",
+            pro_img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRsanRJTm-cvQmrYw6t8LUz9i_ynHe3cwHZNJe1D6G7bzl0bP3sJqHKnIzB8-bacfKqkDyb5W9zbK00Bsme6hW3-upPdf-Ci0W3vUIbh6cpslW33O_E41h8V8HA",
+            price:300,
+            pro_brand:"dot & key",
+        },
+    {
+            pro_name:"face wash",
+            pro_img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQdcACsXwO7XmH-HC0G1gfbajQfwwlJabx21B8OxfWlOl2WgNQWize1Rkr5O32L3W4tetvsdsmbfZeWr7JsfBfZW8NMiVptXqAxN44_4Tm3ISoajqwILbP8Jug",
+            price:300,
+            pro_brand:"dot & key",
+        },
+        {
+            pro_name:"eye cream",
+            pro_img:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuwREqBMJte6Vm4i-K2KCfxNsG0nM3F0GaO9R9Jy-RyWJYOVgjFovqSpTKpmI9Hr8RJaxMMuzfRXiIDkHfp4mw0IgEv0qlPKoD1gPy3rB0vRb-v-OYh5fq9lw",
+            price:300,
+            pro_brand:"dot & key",
+        },{
+            pro_name:"balm",
+            pro_img:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQEOTMq-ZUDvKkqkkrllTmWPVkAxozM9mKtLSsxjPbO452hMdVB24zKZy7eNGE5vE-jqB7uH_SKLyy7mEeutEC2LMBe90xHgcGNLD1vXGIA",
+            price:300,
+            pro_brand:"dot & key",
+        }
+    ];
+                for(i=0;i<product.length;i++){
+
+//         document.write(`<div class="card" style="width: 18rem;">
+//   "<img src="${+product[i].pro_img+}"/>"+" class="card-img-top" alt="...">
+
+//   "<div class="card-body">"
+//     "<h5 class="+product[i].pro_name+"></h5>"
+//     "<p class="card-text">"+product[i].pro_brand+"</p>"
+//         "<p class="card-text">"+product[i].price+"</p>"
+
+//   </div>
+// </div>`)
+
+
+
+document.write(`<div class="card" style="width: 18rem;">
+  <img src="${product[i].pro_img}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${product[i].pro_name}</h5>
+    <p class="card-text">${product[i].pro_brand}</p>
+    <p class="card-text">${product[i].price}</p>
+
+  </div>
+</div>`)
+ document.write("<br/>");
+            document.write("<hr/>");
+            document.write("<br/>");
+    }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

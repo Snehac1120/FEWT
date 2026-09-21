@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        product=[{
+            pro_name:"Face wash",
+            price:500,
+            pro_img:"https://cdn.shopify.com/s/files/1/0609/6096/4855/files/FXN-OAFW100_71.jpg?v=1777364507&width=640&quality=60",
+            pro_brand:"dot & key",
+        },{
+            pro_name:"sun screen",
+            pro_img:"https://cdn.shopify.com/s/files/1/0609/6096/4855/files/FXN-PMTS50-S4-01.jpg?v=1777371983&width=640&quality=60",
+            price:300,
+            pro_brand:"dot & key",
+        }];
+        for(i=0;i<product.length;i++){
+            document.write("name="+product[i].pro_name+"<br/>");
+            document.write("<img src=\""+product[i].pro_img+"\"/>"+"<br/>");
+            document.write("subject="+product[i].price+"<br/>");
+            document.write("Exp="+product[i].pro_brand+"<br/>");
+            document.write("<br/>");
+            document.write("<hr/>");
+            document.write("<br/>");
+        }
+    </script>
+</body>
+</html>

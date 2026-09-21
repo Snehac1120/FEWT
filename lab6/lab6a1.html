@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        faculty=[{
+            fac_name:"Arjun sir",
+            fac_img:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg",
+            subject:"FEWT",
+            fac_exp:"16 yrs",
+        },{
+            fac_name:"Gopi Mam",
+            fac_img:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg",
+            subject:"AIML",
+            fac_exp:"25 yrs",
+        },{
+            fac_name:"Jadeja Sir",
+            fac_img:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg",
+            subject:"DS",
+            fac_exp:"21 yrs",
+        }];
+        for(i=0;i<faculty.length;i++){
+            document.write("name="+faculty[i].fac_name+"<br/>");
+            document.write("<img src=\""+faculty[i].fac_img+"\"/>"+"<br/>");
+            document.write("subject="+faculty[i].subject+"<br/>");
+            document.write("Exp="+faculty[i].fac_exp+"<br/>");
+            document.write("<br/>");
+            document.write("<hr/>");
+            document.write("<br/>");
+        }
+    </script>
+</body>
+</html>
