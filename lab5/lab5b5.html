@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 5. Write a JavaScript that uses a loop that searches a word in sentence held in an array, returning the index of the word. (B)
+        s=prompt("enter a sentence:");
+        // s="hi hello front end web technology";
+        news=s.split(" ");
+        // for(i=0;i<news.length;i++){
+        //     document.write(news[i]+"<br/>");
+        // }
+        word=prompt("enter a word");
+        for(i=0;i<news.length;i++){
+            if(word==news[i]){
+                document.write("index of word:"+i+"<br/>");
+            }
+        }
+        document.write("word="+word+"<br/>");
+        document.write("sentence="+s);
+    </script>
+</body>
+</html>

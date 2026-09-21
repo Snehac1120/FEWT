@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4. WAP to read an array form the user and sort them using quick sort. (B)
+        let n=parseInt(prompt("enter the size."));
+        let a=[];
+         for(i=0;i<n;i++){
+            j=parseInt(prompt("enter a no:"));
+            a.push(j);
+        }
+        // let a=[2,4,8,3,1,0];
+        document.write("unsorted array="+a+"<br/>");
+        function quicksort(a){
+            // base condition
+            if(a.length<=1){
+                return a;
+            }
+
+            let pivot=a[a.length-1];
+            let right=[];
+            let left=[];
+
+            for(i=0;i<a.length-1;i++){
+                if(a[i]<pivot){
+                    left.push(a[i]);
+                }
+                else{
+                right.push(a[i]);
+                }
+            }
+            // spread used to merge arrays
+          return  [...quicksort(left),pivot,...quicksort(right)];
+
+        }
+        res=quicksort(a);
+        document.write("sorted array:"+res+"<br/>");
+    </script>
+</body>
+</html>
