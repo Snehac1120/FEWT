@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+
+<div class="form-container">
+
+    <h2>Student Registration Form</h2>
+
+    <form id="registrationForm">
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" required>
+        </div>
+
+        <div class="form-group">
+            <label>Enrollment No.</label>
+            <input type="text" id="enrollment" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email ID</label>
+            <input type="text" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPass" required>
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</div>
+
+<script>
+
+let form = document.getElementById("registrationForm");
+
+form.addEventListener("submit", validateForm);
+
+function validateForm(event)
+{
+    event.preventDefault();
+
+    let username = document.getElementById("username").value;
+    let enrollment = document.getElementById("enrollment").value;
+    let email = document.getElementById("email").value;
+    let dob = document.getElementById("dob").value;
+    let password = document.getElementById("password").value;
+    let confirmPass = document.getElementById("confirmPass").value;
+
+    let userPattern = /^[A-Za-z0-9]{8,}$/;
+
+    if(!userPattern.test(username))
+    {
+        alert("Username must contain at least 8 characters.");
+        return;
+    }
+
+    let enrollPattern = /^[0-9]{11}$/;
+
+    if(!enrollPattern.test(enrollment))
+    {
+        alert("Enrollment Number must contain exactly 11 digits.");
+        return;
+    }
+
+    let emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,27}$/;
+
+    if(!emailPattern.test(email))
+    {
+        alert("Invalid Email ID.");
+        return;
+    }
+
+    let passPattern = /^(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}$/;
+
+    if(!passPattern.test(password))
+    {
+        alert("Password must be 8 to 12 characters and contain at least one digit and one special character.");
+        return;
+    }
+
+    if(password != confirmPass)
+    {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    let birthDate = new Date(dob);
+    let today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    let month = today.getMonth() - birthDate.getMonth();
+
+    if(month < 0 || (month == 0 && today.getDate() < birthDate.getDate()))
+    {
+        age--;
+    }
+
+    if(age < 18)
+    {
+        alert("Age must be at least 18 years.");
+        return;
+    }
+
+    alert("Registration Successful!");
+
+    form.submit();
+
+}
+
+</script>
+
+</body>
+</html>

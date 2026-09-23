@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <button id="prop">Click to change properties</button>
+        <h2 id="h">Hello world</h2>
+    <script>
+
+        let button = document.getElementById("prop");
+        let heading = document.getElementById("h");
+
+
+        button.addEventListener("click", function() {
+            heading.innerHTML="<p>Welcome to FEWT</p>";
+            console.innerHTML="<p>Welcome to FEWT</p>";
+            document.body.style.backgroundColor="purple";
+            heading.style.fontFamily="serif";
+            heading.style.color="white";
+            heading.style.fontStyle="italic";
+        });
+    </script>
+</body>
+</html>
