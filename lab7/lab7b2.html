@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="username">User name</label>
+        <input type="text" name="" id="user">
+        <br>
+        <label for="pass">Password</label>
+        <input type="password" name="" id="pass">
+        <br>
+        <button type="submit" onclick="login()">Submit</button>
+    </form>
+
+    <script>
+        function login(){
+            
+        let u=document.getElementById('user').value;
+        let p=document.getElementById('pass').value;
+
+        if(u=="sneha" && p=="sdc@121"){
+            alert("valid");
+        }
+        else{
+            console.log("Invalid")
+            alert("Invalid");
+        }
+        }
+        
+    </script>
+</body>
+</html>
